@@ -1,8 +1,0 @@
-
-  {
-      "clinicName" : " Clinic name goes here",
-      "clinicAddress" : " Clinic address goes here",
-      "clinicPhoneNumber" : " Clinic phone number goes here",
-      "clinicListOfDentist" : "Clinic list of dentist's is another entity and the ids of corresponding documents will go here",
-  }
-]
