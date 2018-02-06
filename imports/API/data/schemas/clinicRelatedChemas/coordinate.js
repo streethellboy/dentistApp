@@ -1,4 +1,4 @@
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'simple-schema';
 
 //Creating coordinate Schema
 
@@ -9,22 +9,22 @@ export const Coordinate = new SimpleSchema(
       type : Number,
       min : 0,
       max : 180,
-      label : "طول جغرافیایی",
+      label :"longitude",
     },
     y :
     {
       type : Number,
       min : 0,
       max : 180,
-      label : "عرض جغرافیایی",
+      label : "latitude",
     },
     z :
     {
       type : Number,
       min : 0,
       max : 90,
-      label : "ارتفاع جغرافیایی",
+      label : "altitude",
       optional : true,
     },
   }
-)
+);

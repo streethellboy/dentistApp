@@ -1,5 +1,5 @@
-import SimpleSchema from 'simpl-schema';
-import Coordinate from './coordinate'
+import SimpleSchema from 'simple-schema';
+import Coordinate from './coordinate';
 
 //Creating address Schema
 
@@ -8,45 +8,44 @@ export const Address = new SimpleSchema(
     point :
     {
       type : Coordinate,
-      label : "نقطه روی نقشه",
+      label : "Coordinate On The Map",
       optional : true,
     },
     state :
     {
       type : String,
-      label : "استان",
+      label : "State",
       allowedValues : ["آذربایجان شرقی","تهران"],
     },
     city :
     {
       type : String,
-      label : "شهر",
+      label : "City",
       allowedValues : ["تبریز","تهران"],
     },
     street :
     {
       type : String,
-      label : "خیابان",
-      optional : true,
+      label : "Street",
     },
     alley :
     {
       type : String,
-      label : "کوچه",
+      label : "Alley",
       optional : true,
     },
     tag :
     {
       type : Number,
-      label : "پلاک",
+      label : "Tag",
       optional : true,
     },
     floor :
     {
       type : Number,
-      label : "طبقه",
+      label :"Floor",
       optional : true,
     },
 
   }
-)
+);

@@ -1,11 +1,6 @@
-import {Mongo} from 'meteor/Mongo'
-import ClinicTimes from './../../schemas/clinicTimesSchema'
-
+import {Mongo} from 'meteor/Mongo';
+import SchedualEntitySchema from './../../schemas/doctorRelatedSchemas/SchedualRelatedSchemas/schedualEntitySchema';
 
 export const SchedualEntity = Mongo.Collection("schedualEntity");
 
-let schedualData =
-[
-  clinicTimes : ClinicTimes,
-  reserveListItems :
-]
+SchedualEntity.attachSchema(SchedualEntitySchema);      //Assigning SchedualEntitySchema

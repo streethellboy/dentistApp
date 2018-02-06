@@ -1,15 +1,15 @@
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'simple-schema';
 
 // Creating time Schema
 
 export const Time = new SimpleSchema(
-  [
+  {
     hour :
     {
       type : Integer,
       min : 0,
       max : 24,
-      label : "ساعت",
+      label : "Hour",
       optionl : true,
     },
     minute :
@@ -17,8 +17,8 @@ export const Time = new SimpleSchema(
       type : Integer,
       min : 0,
       max : 60,
-      label : "دقیقه",
+      label : "Minute",
       optionl : true,
     },
-  ]
-)
+  }
+);

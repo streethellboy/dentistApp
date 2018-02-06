@@ -1,4 +1,4 @@
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'simple-schema';
 import Address from './addressSchema';
 
 //Creating resume Schema
@@ -8,36 +8,41 @@ export const Resume = new SimpleSchema(
     activityTitle :
     {
       type : String,
-      label : "عنوان فعالیت"
+      label : "ActivityTitle",
     },
     occupation :
     {
       type : String,
-      label : "سمت",
+      label : "Occupation",
       optional : true,
     },
     typeOfActivity :
     {
       type : String,
-      label : "نوع فعالیت"
-      allowedValues : ["رسمی", "قراردادی", "پیمانی"],
+      label : "Type Of Activity",
+      allowedValues : ["Official" ,"Contract"],
       optional : true,
     },
     activityAddress :
     {
       type : Address,
-      label : "آدرس محل فعالیت",
+      label : "Activity Address",
       optional : true,
     },
     activityDuration :
     {
-      type : Integer,
-      label : "مدت فعالیت"
-      min : 1,
-      max : 30,
+      startDate :
+      {
+        type : Date,
+        label : "Activity Start Date",
+      }
+      endDate :
+      {
+        type : Date,
+        label : "Activity End Date",
+      }
       optional : true,
-      //Activity duration must be entered in year
     },
 
   }
-)
+);

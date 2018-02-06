@@ -1,5 +1,4 @@
-import SimpleSchema from 'simpl-schema';
-import DataSchema from './dataSchema';
+import SimpleSchema from 'simple-schema';
 
 //Creating educationalBackground Schema
 
@@ -8,28 +7,28 @@ export const EducationalBackground =new SimpleSchema(
     university :
     {
       type : String,
-      label : "دانشگاه"
-
+      label : "University",
     },
     subject :
     {
       type : String,
-      label : "رشته تحصیلی"
+      label : "Subject",
     },
     thesis :
     {
       type : String,
-      label : "پایان نامه"
+      label : "Thesis",
     },
     dateOfGraduation :
     {
-      type : DataSchema,
-      label : "تاریخ فارغ التحصیلی"
-    } ,
+      type : Date,
+      label : "Date Of Graduation",
+    },
     description :
     {
       type : String,
-      label : "توضیحات سوابق تحصیلی"
+      label : "Description",
+      optional : true,
     },
   }
-)
+);
