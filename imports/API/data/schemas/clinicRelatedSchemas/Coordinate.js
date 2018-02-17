@@ -1,4 +1,4 @@
-import SimpleSchema from 'simple-schema';
+import SimpleSchema from 'simpl-schema';
 
 //Creating coordinate Schema
 

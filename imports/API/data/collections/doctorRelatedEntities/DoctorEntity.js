@@ -1,5 +1,5 @@
-import {Mongo} from 'meteor/Mongo';
-import DoctorEntitySchema from './../../schemas/doctorRelatedSchemas/doctorEntitySchema';
+import {Mongo} from 'meteor/mongo';
+import {DoctorEntitySchema} from './../../schemas/doctorRelatedSchemas/DoctorEntitySchema';
 
 export const DoctorEntity = new Mongo.Collection('doctorEntity'); //doctorEntity is created
 

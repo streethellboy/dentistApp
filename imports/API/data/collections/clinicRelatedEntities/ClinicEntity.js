@@ -1,5 +1,5 @@
-import {Mongo} from 'meteor/Mongo';
-import ClinicEntitySchema from './../../schemas/clinicRelatedChemas/clinicEntitySchema';
+import {Mongo} from 'meteor/mongo';
+import ClinicEntitySchema from './../../schemas/clinicRelatedSchemas/ClinicEntitySchema';
 
 //Creating clinic DoctorEntity
 

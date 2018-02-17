@@ -1,9 +1,9 @@
-import SimpleSchema from 'simple-schema';
-import Coordinate from './coordinate';
+import SimpleSchema from 'simpl-schema';
+import Coordinate from './Coordinate';
 
 //Creating address Schema
 
-export const Address = new SimpleSchema(
+export const AddressSchema = new SimpleSchema(
   {
     point :
     {
