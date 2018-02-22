@@ -6,6 +6,7 @@ export const DurationDate = new SimpleSchema(
     {
       type : Date
     },
+
     durationEndDate :
     {
       type : Date
