@@ -9,26 +9,32 @@ export const DoctorProfile = new SimpleSchema(
     name :
     {
       type : String,
+      label : "First Name",
       min : 1,              // at least one character must be entered
-      max : 50              // can't enter more than 50 character
+      max : 50,             // can't enter more than 50 character
+      required : true
     },
     lastName :
     {
       type : String,
+      label : "Last Name"
       min : 1,               // at least one character must be entered
-      max : 100              // can't enter more than 50 character
+      max : 100,             // can't enter more than 50 character
+      required : true
     },
     gender :
     {
       type : String,
-      allowedValues : ["male", "female"]
+      label : "Gender",
+      allowedValues : ["male", "female"],
+      required : true
     },
     age :
     {
       type : SimpleSchema.Integer,     //only decimal no float
-      min : 2,            //Children above 2 years
-      max : 90,           //Oldmen under 90
-      optional : true     //this field can be ignored not required
+      min : 2,                         //Children above 2 years
+      max : 90,                        //Oldmen under 90
+      optional : true                  //this field can be ignored not required
     },
     marritalStatus :
     {
