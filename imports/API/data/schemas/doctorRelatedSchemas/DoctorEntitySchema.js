@@ -16,41 +16,74 @@ export const DoctorEntitySchema = new SimpleSchema(
   {
     doctorProfile :
     {
-      type : DoctorProfile
+      type : DoctorProfileSchema,
+      label : "doctor profile",
+      required : true
     },
     doctorFieldOfExpertiseAndSpecialty :
     {
-      type : FieldOfExpertiseAndSpacialty
+      type : FieldOfExpertiseAndSpacialty,
+      label : "field of expertise and spacialty",
+      required : true
     },
 
     doctorEducationalBackgreounds :
     {
-      type : EducationalBackground
+      type : EducationalBackground,
+      label : "educational background",
+      required : true
     },
     listOfServices :              //Here we assign an id from list of service Entity
     {
-      type : ListOfServicesSchema
+      type : Array,
+      label : "List Of Service",
+      allowedValues : ["ویزیت", "عصب کشی"],
+      required : true
     },
 
     schedualList :                   //Here we assign an id from schedual entity
     {
-      type : ReserveListSchema
+      type : Array,
+      minCount : 0,
+      maxCount : 100,
+      label : "reserve list",
+      required : true
+    },
+    'schedualList.$' :
+    {
+      type : ReserveListSchema,
     },
     clinicTimes :
+    {
+      type : Array,
+      label : "clinic times",
+      required : true
+    },
+    'clinicTimes.$' :
     {
       type : ClinicTimesSchema
     },
 
     resume :
     {
-      type : ResumeSchema,
+      type : Array,
+      label : "resume",
       optional : true
+    },
+    'resume.$' :
+    {
+      type : ResumeSchema
     },
 
     gallery :
     {
-      type : GallerySchema,
+      type : Array,
+      label : "gallery",
       optional : true
+    },
+    'gallery.$' :
+    {
+      type : GallerySchema
     }
   }
 );

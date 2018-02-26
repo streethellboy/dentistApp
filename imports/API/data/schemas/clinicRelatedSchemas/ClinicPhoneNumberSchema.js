@@ -5,16 +5,19 @@ export const ClinicPhoneNumberSchema = new SimpleSchema(
     areaCode :
     {
       type : SimpleSchema.Integer,
+      label : "area code",
       min : 000,
       max : 999,
       allowedValues : ["021", "041"],
+      required : true
     },
 
     landLinePhoneNumber :
     {
-      type : SimpleSchema.Integer,
-      min : 10000000,
-      max : 99999999,
+      type : String,
+      label : "landline phone",
+      regEx : /^?[1-9]{1}-?[0-9]{7}$/,
+      required : true
     },
   }
 );

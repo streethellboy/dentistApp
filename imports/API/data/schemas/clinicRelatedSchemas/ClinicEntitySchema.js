@@ -11,23 +11,33 @@ export const ClinicEntitySchema = new SimpleSchema(
       type : String,
       label : "Name",
       min : 1,              // at least one character must be entered
-      max : 50              // can't enter more than 50 character
+      max : 50,              // can't enter more than 50 character
+      required : true
     },
 
     clinicAddress :
     {
-      type: AddressSchema
+      type: AddressSchema,
+      label : "clinic address",
+      required : true
     },
     clinicPhoneNumber :
     {
-      type: ClinicPhoneNumberSchema
+      type: Array,
+      label : "clinic phone number",
+      required : true,
+    },
+    'clinicPhoneNumber.$' :
+    {
+      type : ClinicPhoneNumberSchema
     },
 
     clinicListOfDoctors :       //here this tag holds the doctors Id
     {
       type : Array,
-      label : "Doctor Ids"
-    },
+      label : "Doctor Ids",
+      required : true
+    }
 
   }
 );

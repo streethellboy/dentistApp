@@ -6,11 +6,15 @@ export const ServiceInfoSchema = new SimpleSchema(
   {
     typeOfService :
     {
-      type : TypeOfServiceSchema
+      type : TypeOfServiceSchema,
+      label : "type of service",
+      required : true
     },
     insuranceType :
     {
-      type : InsuranceTypeSchema
+      type : InsuranceTypeSchema,
+      label : "insurance type",
+      required : true
     }
   }
 );

@@ -9,6 +9,8 @@ export const ResumeSchema = new SimpleSchema(
     activityTitle :
     {
       type : String,
+      label : "activity title",
+      required : true
     },
     occupation :
     {

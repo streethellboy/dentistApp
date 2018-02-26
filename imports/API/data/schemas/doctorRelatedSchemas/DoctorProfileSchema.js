@@ -4,7 +4,7 @@ import SimpleSchema from 'simpl-schema';
 
 //Creating the profileSchema
 
-export const DoctorProfile = new SimpleSchema(
+export const DoctorProfileSchema = new SimpleSchema(
   {
     name :
     {
@@ -29,12 +29,13 @@ export const DoctorProfile = new SimpleSchema(
       allowedValues : ["male", "female"],
       required : true
     },
-    age :
+    birthDate :
     {
-      type : SimpleSchema.Integer,     //only decimal no float
-      min : 2,                         //Children above 2 years
-      max : 90,                        //Oldmen under 90
-      optional : true                  //this field can be ignored not required
+      type: Date,
+      label:"birth date",
+      min: new Date(1930, 0, 1),
+      max:new Date(),
+      required: true
     },
     marritalStatus :
     {
@@ -44,13 +45,16 @@ export const DoctorProfile = new SimpleSchema(
     },
     cellphoneNumber :     //Here we take the doctor cellphone number
     {
-        type : SimpleSchema.Integer,
-        min : 09010000000,
-        max : 09399999999
+      type : String,
+      label : "Mobile contact",
+      regEx:/^09(0[1-3]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}}$/,
+      required: true
     },
     clinic_Ids :     // Here we take the list of clinics
     {
-      type : Array
+      type : Array,
+      label : "clinic array",
+      required : true
     },
     emailAddress :
     {
@@ -60,7 +64,15 @@ export const DoctorProfile = new SimpleSchema(
     },
     medicalCouncilNumber :              //Code nezam pezeshki
     {
-      type : SimpleSchema.Integer
+      type : SimpleSchema.Integer,
+      label : "medical council number",
+      required : true
+    },
+    nationalID :
+    {
+      type:String,
+      regEX:/^[0-9]{10}$/,
+      required: true
     },
 
   }

@@ -16,36 +16,39 @@ export const AddressSchema = new SimpleSchema(
       type : String,
       label : "State",
       allowedValues : ["آذربایجان شرقی","تهران"],
+      required : true
     },
     city :
     {
       type : String,
       label : "City",
       allowedValues : ["تبریز","تهران"],
+      required : true
     },
     street :
     {
       type : String,
       label : "Street",
+      required : true
     },
     alley :
     {
       type : String,
       label : "Alley",
-      optional : true,
+      optional : true
     },
     tag :
     {
       type : Number,
       label : "Tag",
-      optional : true,
+      optional : true
     },
     floor :
     {
       type : Number,
       label :"Floor",
-      optional : true,
-    },
+      optional : true
+    }
 
   }
 );

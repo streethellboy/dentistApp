@@ -6,23 +6,28 @@ export const EducationalBackground =new SimpleSchema(
   {
     university :
     {
-      type : String
+      type : String,
+      label : "university"
     },
     subject :
     {
-      type : String
+      type : String,
+      label : "subject"
     },
     thesis :
     {
-      type : String
+      type : String,
+      label : "thesis"
     },
     dateOfGraduation :
     {
-      type : Date
+      type : Date,
+      label : "graduation date"
     },
     description :
     {
       type : String,
+      label : "description",
       optional : true
     }
   }

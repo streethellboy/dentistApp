@@ -7,7 +7,9 @@ export const PatientEntitySchema = new SimpleSchema(
   {
     patientProfile :
     {
-      type : PatientProfileSchema
+      type : PatientProfileSchema,
+      label : "patient profile",
+      required : true
     }
   }
 );

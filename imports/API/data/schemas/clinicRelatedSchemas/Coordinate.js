@@ -10,6 +10,7 @@ export const Coordinate = new SimpleSchema(
       min : 0,
       max : 180,
       label :"longitude",
+      required : true
     },
     y :
     {
@@ -17,6 +18,7 @@ export const Coordinate = new SimpleSchema(
       min : 0,
       max : 180,
       label : "latitude",
+      required :true
     },
     z :
     {

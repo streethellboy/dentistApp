@@ -7,12 +7,18 @@ export const TimeRangeSchema = new SimpleSchema(
     startRange :
     {
       type : Date,
-      label : "Start Range"
+      min: new Date(1930, 0, 1),
+      max:new Date(),
+      label : "Start Range",
+      required : true
     },
     endRange :
     {
       type : Date,
-      label : "End Range"
+      min: new Date(1930, 0, 1),
+      max:new Date(),
+      label : "End Range",
+      required : true
     },
   }
 );

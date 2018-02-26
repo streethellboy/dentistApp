@@ -10,5 +10,9 @@ export const GallerySchema = new SimpleSchema(
       label : "Photo URL",
       regEx : SimpleSchema.RegEx.Url
     },
+    'photoURL.$' :
+    {
+      type : String
+    }
   }
 );
